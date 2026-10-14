@@ -24,7 +24,7 @@ const body = Plus_Jakarta_Sans({
 const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Undangan Ulang Tahun Digital — Pesta Kayla","description":"Contoh undangan ulang tahun anak bergaya party pass: tiket pesta, hitung mundur, wishlist kado, RSVP, ucapan, dan musik latar.","inLanguage":"id"};
 
 export const metadata = {
-  metadataBase: new URL("https://undangan-birthday.vercel.app"),
+  metadataBase: new URL("https://undangan-birthday.pintuweb.id"),
   title: "Undangan Ulang Tahun Digital — Kayla",
   description: "Undangan ulang tahun digital ceria dan penuh warna: detail pesta, galeri, lokasi, dan RSVP. Buat momen spesial makin berkesan.",
   applicationName: "Undangan Digital",
@@ -32,11 +32,11 @@ export const metadata = {
   authors: [{ name: "Undangan Digital" }],
   creator: "Undangan Digital",
   publisher: "Undangan Digital",
-  alternates: { canonical: "https://undangan-birthday.vercel.app" },
+  alternates: { canonical: "https://undangan-birthday.pintuweb.id" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://undangan-birthday.vercel.app",
+    url: "https://undangan-birthday.pintuweb.id",
     siteName: "Undangan Digital",
     title: "Undangan Ulang Tahun Digital — Kayla",
     description: "Undangan ulang tahun digital ceria dan penuh warna: detail pesta, galeri, lokasi, dan RSVP. Buat momen spesial makin berkesan.",

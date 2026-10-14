@@ -2,7 +2,7 @@
 
 Party pass yang meriah: sampul angka usia raksasa dengan konfeti, tiket pesta berperforasi, wishlist kado, dan galeri miring ala foto tempel.
 
-**Demo live:** https://undangan-birthday.vercel.app
+**Demo live:** https://undangan-birthday.pintuweb.id
 
 ![Tangkapan layar](public/og.jpg)
 
