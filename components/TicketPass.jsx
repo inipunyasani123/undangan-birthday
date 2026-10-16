@@ -3,10 +3,12 @@ import { motion } from 'framer-motion';
 import { CalendarDays, Clock, MapPin, Shirt, CalendarPlus, Ticket } from 'lucide-react';
 import config from '@/lib/data';
 import { googleCalendarUrl } from '@/lib/utils';
+import { useGuestName } from '@/lib/hooks';
 
 // Komponen tanda tangan: detail pesta dikemas sebagai TIKET berperforasi.
 export default function TicketPass() {
   const { party, person, meta, location } = config;
+  const guest = useGuestName();
   const calUrl = googleCalendarUrl(
     { ...party, name: `Ulang Tahun ${person.name}` },
     { title: meta.title, location: location.label }
@@ -24,9 +26,9 @@ export default function TicketPass() {
         {/* Header tiket */}
         <div className="flex items-center justify-between gap-2 bg-rose-deep px-6 py-4 text-cream">
           <span className="inline-flex items-center gap-2 font-script text-2xl">
-            <Ticket size={20} /> Party Pass
+            <Ticket size={20} aria-hidden="true" /> Party Pass
           </span>
-          <span className="rounded-full bg-cream/20 px-3 py-1 text-xs font-bold uppercase tracking-wide">Admit One</span>
+          <span className="rounded-full bg-cream/20 px-3 py-1 text-xs font-bold uppercase tracking-wide">Tamu Spesial</span>
         </div>
 
         {/* Garis perforasi */}
@@ -34,15 +36,17 @@ export default function TicketPass() {
 
         {/* Isi tiket */}
         <div className="px-7 py-7">
-          <p className="text-xs font-bold uppercase tracking-widest text-muted">Pemilik Tiket</p>
-          <p className="font-display text-3xl font-extrabold text-ink">{person.name}</p>
+          <h2 className="sr-only">Detail pesta</h2>
+          <p className="text-xs font-bold uppercase tracking-widest text-muted">Pemegang tiket</p>
+          <p className="break-words font-display text-3xl font-extrabold text-ink">{guest}</p>
+          <p className="mt-1 text-sm font-semibold text-rose-deep">Pesta ulang tahun {person.name} yang ke-{person.age}</p>
 
           <div className="mt-5 grid grid-cols-2 gap-4 text-sm">
             <Info icon={CalendarDays} label="Tanggal" value={party.date} />
             <Info icon={Clock} label="Waktu" value={party.time} />
             <Info icon={MapPin} label="Tempat" value={party.venue} full />
             <Info icon={Shirt} label="Dresscode" value={party.dresscode} />
-            <Info icon={Ticket} label="Seat" value={party.seat} />
+            <Info icon={Ticket} label="Kursi" value={party.seat} />
           </div>
 
           <p className="mt-4 text-xs text-muted">{party.address}</p>
@@ -51,7 +55,7 @@ export default function TicketPass() {
             href={calUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-rose py-3 text-sm font-extrabold text-cream transition hover:bg-rose-deep"
+            className="mt-6 flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-rose py-3 text-sm font-extrabold text-cream transition hover:bg-rose-deep"
           >
             <CalendarPlus size={16} /> Simpan ke Kalender
           </a>

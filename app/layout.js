@@ -8,11 +8,13 @@ const display = Outfit({
   variable: '--font-outfit',
   display: 'swap',
 });
+// Font skrip hanya dipakai di isi (bukan sampul): tidak di-preload agar halaman pertama lebih ringan.
 const script = Shrikhand({
   subsets: ['latin'],
   weight: '400',
   variable: '--font-shrikhand',
   display: 'swap',
+  preload: false,
 });
 const body = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -21,7 +23,7 @@ const body = Plus_Jakarta_Sans({
   display: 'swap',
 });
 
-const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Undangan Ulang Tahun Digital — Pesta Kayla","description":"Contoh undangan ulang tahun anak bergaya party pass: tiket pesta, hitung mundur, wishlist kado, RSVP, ucapan, dan musik latar.","inLanguage":"id"};
+const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Undangan Ulang Tahun Digital — Pesta Kayla","url":"https://undangan-birthday.pintuweb.id","description":"Contoh undangan ulang tahun anak bergaya party pass: tiket pesta, hitung mundur, wishlist kado, RSVP, ucapan, dan musik latar.","inLanguage":"id"};
 
 export const metadata = {
   metadataBase: new URL("https://undangan-birthday.pintuweb.id"),

@@ -7,13 +7,16 @@ export default function MapEmbed() {
   return (
     <section className="relative z-10 px-6 py-20">
       <div className="mx-auto max-w-2xl text-center">
-        <p className="font-script text-3xl text-rose sm:text-4xl">Venue</p>
+        <p className="font-script text-3xl text-rose sm:text-4xl">Ketemu di sini</p>
         <h2 className="mt-1 font-display text-3xl font-extrabold text-ink">Lokasi Pesta</h2>
-        <div className="mt-7 overflow-hidden rounded-3xl border-4 border-cream shadow-lg">
+        <div className="relative mt-7 overflow-hidden rounded-3xl border-4 border-cream bg-blush/60 shadow-lg">
+          <p className="absolute inset-0 flex items-center justify-center gap-2 text-sm font-bold text-muted" aria-hidden="true">
+            <MapPin size={16} /> Memuat peta…
+          </p>
           <iframe
             src={location.mapEmbed}
             title="Peta lokasi pesta"
-            className="h-64 w-full border-0"
+            className="relative h-64 w-full border-0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen

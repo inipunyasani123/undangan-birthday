@@ -24,7 +24,7 @@ export default function CountdownTimer() {
         viewport={{ once: true }} transition={{ duration: 0.6 }}
         className="text-center"
       >
-        <p className="font-script text-3xl text-rose sm:text-4xl">{passed ? 'Party time!' : 'Party starts in'}</p>
+        <p className="font-script text-3xl text-rose sm:text-4xl">{passed ? 'Saatnya pesta!' : 'Pesta dimulai dalam'}</p>
         {passed ? (
           <p className="mx-auto mt-5 max-w-sm text-sm font-semibold text-ink">
             Pestanya sudah berlangsung. Terima kasih sudah ikut merayakan bersama Kayla!

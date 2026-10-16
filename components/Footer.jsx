@@ -37,7 +37,7 @@ export default function Footer() {
         </p>
       )}
       <p className="mt-2 text-xs text-cream/90">
-        See you at the party! 🎉 · <Link href="/kirim" className="font-bold underline underline-offset-4">Bagikan party pass ke teman</Link>
+        Sampai ketemu di pesta! 🎉 · <Link href="/kirim" className="inline-block py-2 font-bold underline underline-offset-4">Bagikan party pass ke teman</Link>
       </p>
     </footer>
   );

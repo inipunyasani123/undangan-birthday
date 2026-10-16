@@ -9,12 +9,12 @@ export default function Hero() {
   const { person, opening } = config;
 
   return (
-    <section className="relative z-10 flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-24 text-center">
+    <section className="relative z-10 flex min-h-svh flex-col items-center justify-center overflow-hidden px-6 py-24 text-center">
       <motion.p
         initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
         className="font-script text-4xl text-rose sm:text-5xl"
       >
-        It&apos;s my party!
+        Hore, aku {person.age} tahun!
       </motion.p>
 
       <motion.div
@@ -22,7 +22,7 @@ export default function Hero() {
         className="relative mt-6"
       >
         {/* Angka usia raksasa di belakang */}
-        <span className="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 font-display text-[10rem] font-extrabold leading-none text-rose-deep/10 sm:text-[16rem]">
+        <span aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 font-display text-[10rem] font-extrabold leading-none text-rose-deep/10 sm:text-[16rem]">
           {person.age}
         </span>
         <div className="relative mx-auto h-56 w-56 overflow-hidden rounded-[2.5rem] border-[6px] border-rose shadow-xl">

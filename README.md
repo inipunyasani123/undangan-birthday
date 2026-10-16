@@ -10,12 +10,12 @@ Party pass yang meriah: sampul angka usia raksasa dengan konfeti, tiket pesta be
 
 ## Fitur
 
-- Sampul “Get Your Party Pass” yang menyapa nama tamu (`?to=Nama`)
+- Sampul “Ambil Tiket Pestamu” yang menyapa nama tamu (`?to=Nama`); tiket pesta di dalamnya mencantumkan nama tamu sebagai pemegang tiket
 - Tiket pesta berisi tanggal, jam, tempat, dresscode
 - Hitung mundur pesta, wishlist kado
 - Galeri, peta, RSVP & ucapan — mode demo
 - **`/kirim` — alat tuan rumah:** ketik daftar tamu, dapatkan tautan pribadi tiap tamu dan pesan WhatsApp siap kirim. Semua diproses di peramban (localStorage), tanpa server.
-- Musik latar dengan tombol putar/jeda (judul lagu tampil di tombol dan footer)
+- Musik latar: tamu memilih nyala/mati lewat sakelar di sampul; baru diputar setelah undangan dibuka, lalu bisa dijeda lewat tombol mengambang (judul lagu tampil di tombol dan footer)
 - Halaman 404 bergaya sendiri
 
 ## Mengganti isi
