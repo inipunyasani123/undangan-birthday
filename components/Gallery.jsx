@@ -21,17 +21,17 @@ export default function Gallery() {
         <h2 className="mt-1 font-display text-3xl font-extrabold text-ink">Galeri</h2>
 
         <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
-          {gallery.map((src, i) => (
+          {gallery.map((foto, i) => (
             <motion.button
-              key={src}
+              key={foto.src}
               style={{ rotate: tilts[i % tilts.length] }}
               whileHover={{ rotate: '0deg', scale: 1.04 }}
               type="button"
               onClick={() => setActive(i)}
               className="relative h-36 w-full overflow-hidden rounded-2xl border-4 border-cream shadow-md sm:h-44"
-              aria-label={`Perbesar foto ${i + 1}`}
+              aria-label={`Perbesar foto: ${foto.alt}`}
             >
-              <Image src={src} alt={`Foto ${i + 1}`} fill sizes="(max-width:640px) 45vw, 240px" className="object-cover" />
+              <Image src={foto.src} alt={foto.alt} fill sizes="(max-width:640px) 45vw, 240px" className="object-cover" />
             </motion.button>
           ))}
         </div>
@@ -52,7 +52,7 @@ export default function Gallery() {
               initial={{ scale: 0.9 }} animate={{ scale: 1 }} exit={{ scale: 0.9 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <Image src={gallery[active]} alt={`Foto ${active + 1}`} fill sizes="(max-width: 640px) 100vw, 512px" className="object-contain" />
+              <Image src={gallery[active].src} alt={gallery[active].alt} fill sizes="(max-width: 640px) 100vw, 512px" className="object-contain" />
             </motion.div>
           </motion.div>
         )}

@@ -26,7 +26,7 @@ export default function Hero() {
           {person.age}
         </span>
         <div className="relative mx-auto h-56 w-56 overflow-hidden rounded-[2.5rem] border-[6px] border-rose shadow-xl">
-          <Image src={person.photo} alt={person.fullName} fill priority sizes="224px" className="object-cover" />
+          <Image src={person.photo} alt={person.photoAlt || person.fullName} fill priority sizes="224px" className="object-cover" />
         </div>
       </motion.div>
 
