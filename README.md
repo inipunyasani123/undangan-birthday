@@ -29,7 +29,7 @@ Seluruh isi ada di satu file: `lib/data.js` (nama, tanggal, acara, galeri, musik
 
 ## Gambar & kredit
 
-- `public/images/*.webp` — ilustrasi bergaya stiker pesta buatan sendiri, digambar dari SVG; tokohnya fiktif. Lihat `public/images/SUMBER.md`.
+- `public/images/*.webp` — `foto-6` foto domain publik (cupcake); sisanya ilustrasi bergaya stiker pesta buatan sendiri, digambar dari SVG; tokohnya fiktif. Lihat `public/images/SUMBER.md`.
 - `public/music/latar.mp3` — *Maple Leaf Rag — Scott Joplin*, rekaman US Air Force Band, domain publik — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Maple_Leaf_Rag_-_Strolling_Strings_-_United_States_Air_Force_Band.mp3). Diperkecil ke MP3 mono 80 kbps.
 
 ## Teknologi
